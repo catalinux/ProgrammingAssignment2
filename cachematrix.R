@@ -1,5 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Caching inverse of a method, by storing the result in a variable. First time when is called the method 
+# will calculate the result and store it into a variable. Second time it returns the saved data
+## 
 
 
 ##usage of these functions
@@ -14,9 +15,11 @@
 
 
 ## builds a special list that stores the matrix, its inverse and 2 methods of
-## setting and retrieving the cahed result of solve method (inverse)
+## setting and retrieving the cached result of solve method (inverse)
 
 makeCacheMatrix <- function(x = matrix()) {
+  
+  #check whether the arguments is a matrix or not
   if(!is.matrix(as.matrix(x))){
          stop("1st argument should be a matrix")
   }
